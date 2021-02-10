@@ -1,0 +1,32 @@
+{
+    "name": "richardhj/symfony-ux-sync",
+    "type": "composer-plugin",
+    "description": "Composer plugin for enabling Symfony UX packages",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Richard Henkenjohann",
+            "email": "richardhenkenjohann@googlemail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+
+        "composer-plugin-api": "^2.0"
+    },
+    "require-dev": {
+        "composer/composer": "^2.0",
+        "symfony/phpunit-bridge": "^4.4|^5.0",
+        "symfony/filesystem": "^4.4|^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Richardhj\\SymfonyUxSyncPlugin\\": "src/"
+        }
+    },
+    "extra": {
+        "class": "Richardhj\\SymfonyUxSyncPlugin\\Plugin"
+    }
+}
