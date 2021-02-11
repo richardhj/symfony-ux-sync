@@ -69,6 +69,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
         }
 
         return [
+            ScriptEvents::POST_UPDATE_CMD => 'install',
             ScriptEvents::POST_INSTALL_CMD => 'install',
         ];
     }
