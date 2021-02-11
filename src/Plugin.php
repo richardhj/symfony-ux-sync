@@ -56,9 +56,9 @@ class Plugin implements PluginInterface, EventSubscriberInterface
         if ($synchronizer->shouldSynchronize()) {
             $packagesNames = array_column($this->composer->getLocker()->getLockData()['packages'] ?? [], 'name');
 
-            $this->io->writeError('<info>Synchronizing package.json with PHP packages</>');
+            $this->io->writeError('<info>Synchronizing package.json with PHP packages</info>');
             $synchronizer->synchronize($packagesNames);
-            $this->io->writeError('Don\'t forget to run <comment>npm install --force</> or <comment>yarn install --force</> to refresh your JavaScript dependencies!');
+            $this->io->writeError('Don\'t forget to run <comment>npm install --force</comment> or <comment>yarn install --force</comment> to refresh your JavaScript dependencies!');
         }
     }
 
